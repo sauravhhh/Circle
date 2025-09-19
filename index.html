@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>{Circle}</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="logo">{Circle}</div>
+        </div>
+        
+        <div class="drawing-hint" id="drawingHint">Draw a circle on the screen</div>
+        
+        <div class="canvas-container">
+            <canvas id="canvas"></canvas>
+            <div class="score-container" id="scoreContainer">
+                <div class="score" id="score"></div>
+                <div class="score-label" id="scoreLabel">New best score</div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="btn btn-share" id="shareBtn">Share</button>
+            <button class="btn btn-copy" id="copyBtn">Copy</button>
+        </div>
+        
+        <div class="footer">
+            Made with ❤️ by Sauravhhh
+        </div>
+    </div>
+    
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
