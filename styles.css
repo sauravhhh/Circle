@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.canvas-container {
+    position: relative;
+    width: 90vw;
+    max-width: 500px;
+    height: 90vw;
+    max-height: 500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#canvas {
+    background-color: #111;
+    border-radius: 10px;
+    touch-action: none;
+    width: 100%;
+    height: 100%;
+}
+
+.score-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 5;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.score {
+    font-size: 72px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: color 0.5s ease;
+}
+
+.score-label {
+    font-size: 24px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.score-label.show {
+    opacity: 1;
+}
+
+.controls {
+    position: absolute;
+    bottom: 80px; /* Adjusted to make room for the footer */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 10;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-share {
+    background-color: #4CAF50; /* Green for share */
+    color: white;
+}
+
+.btn-share:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn-copy {
+    background-color: #9C27B0; /* Purple */
+    color: white;
+}
+
+.btn-copy:hover {
+    background-color: #7B1FA2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.notification.show {
+    opacity: 1;
+}
+
+.drawing-hint {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+    transition: opacity 0.3s ease;
+}
+
+.drawing-hint.hide {
+    opacity: 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    z-index: 10;
+}
+
+/* Remove spacing above and below the canvas */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+  }
